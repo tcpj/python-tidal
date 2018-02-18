@@ -41,10 +41,10 @@ class Quality(object):
 
 
 class Config(object):
-    def __init__(self, quality=Quality.high):
+    def __init__(self, quality=Quality.high, api_token=None):
         self.quality = quality
         self.api_location = 'https://api.tidalhifi.com/v1/'
-        self.api_token = 'P5Xbeo5LFvESeDy6' if self.quality == \
+        self.api_token = api_token or 'P5Xbeo5LFvESeDy6' if self.quality == \
             Quality.lossless else '4zx46pyr9o8qZNRw',
 
 
